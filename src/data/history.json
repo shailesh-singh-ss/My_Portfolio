@@ -1,0 +1,30 @@
+[
+  {
+    
+    "organisation": "Codeforces",
+    "rank": "Specialist",
+    "rating": "Highest Rating - 1558",
+    "experiences": [ "Global Rank - 892 in Codeforces Round 935 (Div. 3), out of 7,200+ participants","Global Rank - 1137 in Codeforces Round 929 (Div. 3), out of 20,000+ participants"],
+    "imageSrc": "history/codeforces.png",
+    "link": "https://codeforces.com/profile/Shailesh_21"
+  },
+  {
+    "organisation": "Leetcode",
+    "rank": "Knight",
+    "rating": "Highest Rating - 1853",
+    "experiences": [" Ranked Top 5.85% in Global Coders , out of 80,000+ Indian participants","Global Rank - 1336 in LeetCode Biweekly Contest 126, out of 21,000+ participants"],
+    "imageSrc": "history/leetcode.png",
+    "link": "https://leetcode.com/u/shailesh_21/"
+    
+  },
+  {
+    "organisation": "CodeChef",
+    "rank": "4 STAR",
+    "rating": "Highest Rating - 1844",
+    "experiences": [
+      " All India Rank - 3655 (Global Rank 4686), out of 200,000+ active Indian users", "Global Rank - 187 in CodeChef Starters 116 Division 2"
+    ],
+    "imageSrc": "history/codechef.png",
+    "link": "https://www.codechef.com/users/shailesh_s21"
+  }
+]

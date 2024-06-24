@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Blog Website",
+    "imageSrc": "projects/blog_project.png",
+    "description": "Engineered a fully functional blog platform utilizing React, Appwrite, and TailwindCSS. This project showcases my ability to develop both frontend and backend components, emphasizing secure user authentication and efficient data management.",
+    "skills": ["React", "Appwrite", "Node","Tailwind", "Redux", "Git" , "React Router"],
+    "demo": "https://blog-nu-lake-62.vercel.app",
+    "source": "https://github.com/shailesh-singh-ss/Blog"
+  },
+  {
+    "title": "MCQ Generator",
+    "imageSrc": "projects/mcq_generator_project.png",
+    "description": "Developed an AI-powered MCQ generator using LangChain, Python, and the Cohere LLM. The system allows users to upload PDF or TXT files, specify topics, and generate editable MCQs. Features include topic selection, difficulty settings, and a review mechanism.",
+    "skills": [ "Python","LangChani", "Streamlit", "Cohere LLM", "Git", "Generative AI"],
+    "demo": "https://mcq-generator-n5eewjaorzysa3gvqkjgfh.streamlit.app",
+    "source": "https://github.com/shailesh-singh-ss/MCQ-Generator?tab=readme-ov-file#mcq-generator-with-ai"
+  },
+  {
+    "title": "Youtube Backend",
+    "imageSrc": "projects/project.png",
+    "description": "Developed a comprehensive backend for a video hosting website similar to YouTube using Node.js, Express.js, MongoDB, and Mongoose. Features include user authentication, video upload, like/dislike, comments, and subscriptions. Implemented JWT, bcrypt, access tokens, and refresh tokens following best practices. ",
+    "skills": ["Express", "Node",  "MongoDB", "JWT", "bcrypt", "Postman"],
+    "demo": "https://github.com/shailesh-singh-ss/Youtube-Backend-Learning",
+    "source": "https://github.com/shailesh-singh-ss/Youtube-Backend-Learning"
+  },
+  {
+    "title": "Medical Chatbot",
+    "imageSrc": "projects/medical_chatbot_project.png",
+    "description": "Developed a medical chatbot leveraging generative AI and the GALE Encyclopedia of Medicine 2. Utilized Python, LangChain, ChromaDB, LLaMA2, and Hugging Face to provide accurate medical suggestions. Features include embedding medical content, storing embeddings in ChromaDB, and generating responses using LLaMA2.",
+    "skills": ["Python", "LangChani", "ChromaDB", "LLaMA", "Hugging Face", "Git"],
+    "demo": "https://github.com/shailesh-singh-ss/Medical-Chat-Bot",
+    "source": "https://github.com/shailesh-singh-ss/Medical-Chat-Bot"
+  },
+  {
+    "title": "Wordle Game",
+    "imageSrc": "projects/wordle_project.png",
+    "description": "Developed a Wordle game clone . The game offers daily word challenges with interactive keyboard input and color-coded feedback to indicate correct and incorrect guesses. Focused on delivering a smooth and engaging user experience, the game features responsive design, ensuring compatibility across both mobile and desktop devices. This project demonstrates proficiency in front-end development and user interface design. ",
+    "skills": ["JavaScript", "HTML", "CSS", "Git"],
+    "demo": "https://wordle-pink-nu.vercel.app/",
+    "source": "https://github.com/shailesh-singh-ss/Wordle-js/tree/main/Wordle"
+  },
+  {
+    "title": "Tic-Tac-Toe Game",
+    "imageSrc": "projects/tic-tac-toe_project.png",
+    "description": "Developed a classic Tic-Tac-Toe game. The game features a two-player mode with an intuitive user interface, allowing players to enjoy seamless gameplay on desktop and mobile. Implemented comprehensive game logic to handle win detection, draw scenarios, and invalid moves, ensuring a smooth user experience. This project showcases my skills in front-end development, responsive design, and interactive game creation. ",
+    "skills": ["JavaScript", "HTML", "CSS", "Git"],
+    "demo": "https://tic-tac-toe-ecru-mu.vercel.app/",
+    "source": "https://github.com/shailesh-singh-ss/Tic-Tac-Toe"
+  }
+]
