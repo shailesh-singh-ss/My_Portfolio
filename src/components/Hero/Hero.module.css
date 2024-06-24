@@ -118,4 +118,8 @@
     width: 70%;
     margin: 10% 0;
   }
+  .contactBtn{
+    font-size: 20px;
+    /* padding: 10px 20px */
+  }
 }
