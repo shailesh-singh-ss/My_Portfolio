@@ -11,7 +11,7 @@
     "title": "MCQ Generator",
     "imageSrc": "projects/mcq_generator_project.png",
     "description": "Developed an AI-powered MCQ generator using LangChain, Python, and the Cohere LLM. The system allows users to upload PDF or TXT files, specify topics, and generate editable MCQs. Features include topic selection, difficulty settings, and a review mechanism.",
-    "skills": [ "Python","LangChani", "Streamlit", "Cohere LLM", "Git", "Generative AI"],
+    "skills": [ "Python","LangChain", "Streamlit", "Cohere LLM", "Git", "Generative AI"],
     "demo": "https://mcq-generator-n5eewjaorzysa3gvqkjgfh.streamlit.app",
     "source": "https://github.com/shailesh-singh-ss/MCQ-Generator?tab=readme-ov-file#mcq-generator-with-ai"
   },
@@ -27,7 +27,7 @@
     "title": "Medical Chatbot",
     "imageSrc": "projects/medical_chatbot_project.png",
     "description": "Developed a medical chatbot leveraging generative AI and the GALE Encyclopedia of Medicine 2. Utilized Python, LangChain, ChromaDB, LLaMA2, and Hugging Face to provide accurate medical suggestions. Features include embedding medical content, storing embeddings in ChromaDB, and generating responses using LLaMA2.",
-    "skills": ["Python", "LangChani", "ChromaDB", "LLaMA", "Hugging Face", "Git"],
+    "skills": ["Python", "LangChain", "ChromaDB", "LLaMA", "Hugging Face", "Git"],
     "demo": "https://github.com/shailesh-singh-ss/Medical-Chat-Bot",
     "source": "https://github.com/shailesh-singh-ss/Medical-Chat-Bot"
   },
