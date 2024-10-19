@@ -26,7 +26,7 @@ export const Experience = () => {
           {history.map((historyItem, id) => {
             return (
               <li key={id} className={styles.historylist}>
-                <a href={historyItem.link} key={id} className={styles.historyItem}>
+                <a href={historyItem.link} key={id} target="_blank" className={styles.historyItem}>
                   <img
                     src={getImageUrl(historyItem.imageSrc)}
                     alt={`${historyItem.organisation} Logo`}
