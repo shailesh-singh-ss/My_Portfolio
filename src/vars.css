@@ -8,4 +8,13 @@
 
   /* Fonts */
   --font-roboto: "Roboto";
+
+  /* Chatbot */
+  --primary-color: #3498db;
+  --primary-color-dark: #2980b9;
+  --text-color-light: white;
+  --bg-color-light: white;
+  --user-message-bg: #e1f5fe;
+  --bot-message-bg: #f0f0f0;
+  --border-color: #e0e0e0;
 }
