@@ -5,7 +5,7 @@ const model = genAI.getGenerativeModel({
     model: "gemini-1.5-flash",
     generationConfig: {
         maxOutputTokens: 100,
-        temperature: 1.0,
+        temperature: 0.5,
     }
 });
 const prompt = `
@@ -57,7 +57,7 @@ const prompt = `
     - Email: ss.forcoding@gmail.com
     - [LinkedIn](https://www.linkedin.com/in/shailesh-singh-544bb3229/) profile.
     - [GitHub](https://github.com/shailesh-singh-ss) for open-source contributions.
-    Ensure links are user-friendly and open in a new tab.
+    Ensure links are user-friendly.
 
     Response Guidelines:
 
