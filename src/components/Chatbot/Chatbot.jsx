@@ -57,7 +57,7 @@ const ChatBotAssistant = () => {
                 <div className={styles.chatBox}>
                     <div className={styles.chatHeader}>
                         <div className={styles.headerInfo}>
-                            <h3>Chat Assistant</h3>
+                            <h3>NeonWave Assistant</h3>
                             <span className={styles.statusIndicator}>Online</span>
                         </div>
                         <button onClick={toggleChat} className={styles.closeButton}>
