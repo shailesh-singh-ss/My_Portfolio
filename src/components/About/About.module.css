@@ -66,11 +66,12 @@
   font-size: 25px;
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 750px) {
   .container {
     background-color: transparent;
     padding-left: 0;
     padding-right: 0;
+    margin-top: 20px;
   }
 
   .content {
@@ -82,11 +83,22 @@
   }
 
   .aboutItems {
-    margin-top: 29px;
+    width: 120%;
+    margin-top: 10px;
+    gap: 15px;
   }
 
   .aboutItem {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 10;
+    padding-right: 5px;
   }
+  .aboutItemIcon {
+    display: none;
+  }
+
+  .aboutItemText p{
+    padding-top: 10px;
+    font-size: 20px;
+  }
+
 }

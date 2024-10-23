@@ -29,7 +29,7 @@ export const Experience = () => {
                 <a href={historyItem.link} key={id} target="_blank" className={styles.historyItem}>
                   <img
                     src={getImageUrl(historyItem.imageSrc)}
-                    alt={`${historyItem.organisation} Logo`}
+                    alt={`${historyItem.organisation} Logo`} className={styles.historyItemImage}
                   />
                   <div className={styles.historyItemDetails}>
                     <h3>{`${historyItem.organisation}`}</h3>

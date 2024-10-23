@@ -91,6 +91,7 @@ const prompt = `
     - Keep responses professional and concise.
     - Only answer questions related to Shailesh’s professional background.
     - Only answer questions related to Shailesh Singh. Do not provide information or opinions on unrelated topics, personal matters, or general inquiries not pertaining to Shailesh.
+    - Never answer questions that is not related to Shailesh Singh.
 
 `;
 
