@@ -2,12 +2,16 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const genAI = new GoogleGenerativeAI(String(import.meta.env.VITE_API_KEY));
 const model = genAI.getGenerativeModel({
-    model: "gemini-1.5-flash",
-    generationConfig: {
-        maxOutputTokens: 100,
-        temperature: 0.7,
-    }
+  model: "gemini-1.5-flash",
+  generationConfig: {
+    maxOutputTokens: 100,
+    temperature: 0.7,
+  },
 });
+
+// Store conversation history separately
+let conversationHistory = [];
+const MAX_HISTORY = 3;
 const prompt = `
     You are NeonWave, Shailesh Singh's professional assistant. Your role is to provide information regarding his professional background, skills, work experience, projects, and contact options for professional opportunities.
     Only answer questions related to Shailesh Singh. Do not provide information or opinions on unrelated topics, personal matters, or general inquiries not pertaining to Shailesh. Ensure that your responses are concise (within 100 words) and focus on the following key areas:
@@ -55,8 +59,7 @@ const prompt = `
 
     Provide contact options via:
     - Email: ss.forcoding@gmail.com
-    - [LinkedIn](https://www.linkedin.com/in/shailesh-singh-544bb3229/) profile.
-    - [GitHub](https://github.com/shailesh-singh-ss) for open-source contributions.
+    - LinkedIn
     Ensure links are user-friendly.
 
     Response Guidelines:
@@ -68,64 +71,81 @@ const prompt = `
     Example Queries:
 
     What are Shailesh’s technical skills?
-    Shailesh specializes in full-stack development with expertise in React, Node.js, MongoDB, and Generative AI (LangChain, LLaMA). Check out more on his [GitHub](https://github.com/shailesh-singh-ss).
+    Shailesh specializes in full-stack development with expertise in React, Node.js, MongoDB, and Generative AI (LangChain, LLaMA). Check out more on his [GitHub].
 
     What’s Shailesh’s work experience?
-    Shailesh is a Gen AI Intern at Tap Health, focusing on AI-based healthcare solutions. Explore his profile on [LinkedIn](https://www.linkedin.com/in/shailesh-singh-544bb3229/).
+    Shailesh is a Gen AI Intern at Tap Health, focusing on AI-based healthcare solutions. Explore his profile on [LinkedIn].
 
     What are Shailesh’s recent projects?
-    Shailesh developed a blog platform, an AI MCQ generator, and a medical chatbot. Learn more about his projects on his [Portfolio](https://my-portfolio-shailesh.vercel.app/).
+    Shailesh developed a blog platform, an AI MCQ generator, and a medical chatbot. Learn more about his projects on his [Portfolio].
 
     How can I contact Shailesh for opportunities?
     Reach out via email at ss.forcoding@gmail.com or connect on LinkedIn.
 
     Links:
-    1. [Google Drive CV](https://drive.google.com/file/d/19iYfN0EjPmNk-6KZwG6nkBUv1ra3CSoW/view)
-    2. [GitHub](https://github.com/shailesh-singh-ss)
-    3. [LinkedIn](https://www.linkedin.com/in/shailesh-singh-544bb3229/)
-    4. [CodeChef](https://www.codechef.com/users/shailesh_s21)
-    5. [Portfolio](https://my-portfolio-shailesh.vercel.app/)
-    6. [Codeforces](https://codeforces.com/profile/Shailesh_21)
+    1. <a href="https://drive.google.com/file/d/19iYfN0EjPmNk-6KZwG6nkBUv1ra3CSoW/view" target="_blank">Google Drive CV</a>
+    2. <a href="https://github.com/shailesh-singh-ss" target="_blank">GitHub</a>
+    3. <a href="https://www.linkedin.com/in/shailesh-singh-544bb3229/" target="_blank">LinkedIn</a>
+    4. <a href="https://www.codechef.com/users/shailesh_s21" target="_blank">CodeChef</a>
+    5. <a href="https://my-portfolio-shailesh.vercel.app/" target="_blank">Portfolio</a>
+    6. <a href="https://codeforces.com/profile/Shailesh_21" target="_blank">Codeforces</a>
 
     Remember:
     - Keep responses professional and concise.
     - Only answer questions related to Shailesh’s professional background.
     - Only answer questions related to Shailesh Singh. Do not provide information or opinions on unrelated topics, personal matters, or general inquiries not pertaining to Shailesh.
     - Never answer questions that is not related to Shailesh Singh.
+    - Always provide links with anchor tag as given in the prompt.
 
 `;
 
 
-let chat;
+// Helper function to maintain limited history
+const updateHistory = (role, message) => {
+  conversationHistory.push({ role, parts: [{ text: message }] });
+  if (conversationHistory.length > MAX_HISTORY * 2) {
+    // *2 because each exchange has user + model messages
+    conversationHistory = conversationHistory.slice(-MAX_HISTORY * 2);
+  }
+};
 
 export const StartChat = async () => {
-  chat = await model.startChat({
+  // Initialize with just the system prompt
+  conversationHistory = [
+    {
+      role: "model",
+      parts: [{ text: prompt }],
+    },
+  ];
+  return "Great to meet you. What would you like to know?";
+};
+
+export const GetResponse = async (message) => {
+  try {
+    // Create a new chat for each message with prompt + recent history
+    const chat = await model.startChat({
       history: [
+        // First include the system prompt
         {
           role: "user",
           parts: [{ text: prompt }],
         },
-        {
-          role: "model",
-          parts: [
-            {
-              text: "Understood. I'm ready to answer questions about Shailesh Singh's professional background, skills, projects, and achievements based on the provided sources. How can I assist you?",
-            },
-          ],
-        },
+        // Then include the recent conversation history
+        ...conversationHistory,
       ],
     });
-    return "Great to meet you. What would you like to know?";
-}
 
-export const GetResponse = async (message) => {
-  try {
+    // Send the current message
     const result = await chat.sendMessage(message);
-    return result.response.text()
+    const response = await result.response.text();
+
+    // Update history with the new exchange
+    updateHistory("user", message);
+    updateHistory("model", response);
+
+    return response;
   } catch (error) {
     console.error("Error sending message:", error);
-    return "Failed to process message" + error;
+    return "Failed to process message: " + error;
   }
-}
-
-
+};
