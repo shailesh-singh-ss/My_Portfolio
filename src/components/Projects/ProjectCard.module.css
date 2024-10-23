@@ -62,3 +62,22 @@
   background: var(--color-primary);
   padding: 1px 22px;
 }
+
+
+
+@media screen and (max-width: 750px) {
+  
+  .skill {
+    font-size: calc(15px + 1vw);
+    font-weight: 100;
+    border-radius: 100px;
+    background: var(--color-dark);
+    padding: 2px 15px;
+  }
+
+  .link {
+    font-size: 25px;
+    font-weight: 500;
+    padding: 5px 22px;
+  }
+}
