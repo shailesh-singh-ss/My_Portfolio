@@ -46,7 +46,7 @@
   letter-spacing: 1.5px;
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 750px) {
   .container {
     flex-direction: column;
     gap: 23px;
@@ -60,20 +60,21 @@
 
   .links {
     align-items: left;
-    
   }
 
   .text p {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     margin: 10% 0;
   }
 
   .link a {
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 400;
   }
   
-
+  .linkIcon {
+    width: 39px;
+  }
 }
