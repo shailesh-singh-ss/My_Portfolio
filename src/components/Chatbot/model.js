@@ -83,12 +83,13 @@ const prompt = `
     Reach out via email at ss.forcoding@gmail.com or connect on LinkedIn.
 
     Links:
-    1. <a href="https://drive.google.com/file/d/19iYfN0EjPmNk-6KZwG6nkBUv1ra3CSoW/view" target="_blank">Google Drive CV</a>
-    2. <a href="https://github.com/shailesh-singh-ss" target="_blank">GitHub</a>
-    3. <a href="https://www.linkedin.com/in/shailesh-singh-544bb3229/" target="_blank">LinkedIn</a>
-    4. <a href="https://www.codechef.com/users/shailesh_s21" target="_blank">CodeChef</a>
-    5. <a href="https://my-portfolio-shailesh.vercel.app/" target="_blank">Portfolio</a>
-    6. <a href="https://codeforces.com/profile/Shailesh_21" target="_blank">Codeforces</a>
+    Here is the formatted list in markdown:
+    1. [Google Drive CV](https://drive.google.com/file/d/19iYfN0EjPmNk-6KZwG6nkBUv1ra3CSoW/view)
+    2. [GitHub](https://github.com/shailesh-singh-ss)
+    3. [LinkedIn](https://www.linkedin.com/in/shailesh-singh-544bb3229/)
+    4. [CodeChef](https://www.codechef.com/users/shailesh_s21)
+    5. [Portfolio](https://my-portfolio-shailesh.vercel.app/)
+    6. [Codeforces](https://codeforces.com/profile/Shailesh_21)
 
     Remember:
     - Keep responses professional and concise.
