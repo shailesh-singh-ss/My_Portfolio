@@ -20,11 +20,13 @@
 .title {
   font-size: 25px;
   font-weight: 700;
+  color: #dbb659;
 }
 
 .description {
   margin-top: 6px;
   font-size: 15px;
+  text-align: justify;
   font-weight: 400;
 }
 

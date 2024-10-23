@@ -1,0 +1,136 @@
+@import "../../vars.css";
+
+.container {
+  position: relative;
+  padding: 60px;
+  background-color: rgba(20, 30, 50, 0.8); /* New background color */
+  border-radius: 15px;
+  margin-top: 70px;
+  margin-left: 10%;
+  margin-right: 10%;
+  overflow: hidden;
+}
+
+.title {
+  color: var(--color-text); /* Matches the About section title color */
+  font-size: 35px; /* Same as in the About section */
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.experienceCard {
+  position: relative;
+  padding: 40px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
+  box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.1), 0 15px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.experienceCard:hover {
+  transform: scale(1.02);
+}
+
+.cardContent {
+  position: relative;
+  z-index: 1;
+  color: var(--color-text);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.role {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #f8f8f8;
+  text-transform: capitalize;
+}
+
+.company {
+  font-weight: 700;
+  color: #ffcf56;
+}
+
+.duration {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: justify;
+  padding-left: 15px;
+  border-left: 4px solid #ffcf56; /* Stylized border */
+  position: relative;
+}
+
+.description::before {
+  content: "“";
+  font-size: 70px;
+  color: rgba(255, 255, 255, 0.05);
+  position: absolute;
+  top: -40px;
+  left: -30px;
+}
+
+.description::after {
+  content: "”";
+  font-size: 70px;
+  color: rgba(255, 255, 255, 0.05);
+  position: absolute;
+  bottom: -65px;
+  right: -25px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 40px 20px;
+  }
+
+  .experienceCard {
+    padding: 30px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .cardHeader {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .role {
+    font-size: 1.6rem;
+  }
+
+  .company {
+    font-size: 1.4rem;
+    margin-top: 5px; /* Add spacing between role and company */
+    display: block;
+  }
+
+  .duration {
+    font-size: 1.2rem;
+    margin-top: 10px; /* Add spacing between company and duration */
+  }
+
+  .description {
+    font-size: 1rem;
+    padding-left: 10px;
+    border-left-width: 3px;
+  }
+}

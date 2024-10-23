@@ -43,6 +43,15 @@ export const About = () => {
               </p>
             </div>
           </li>
+          <li className={styles.aboutItem}>
+            <img src={getImageUrl("about/aiIcon.png")} alt="UI icon" className={styles.aboutItemIcon} />
+            <div className={styles.aboutItemText}>
+              <h3>Generative AI</h3>
+              <p>
+                I specialize in developing and fine-tuning generative AI models, creating innovative solutions across various domains such as text, images, and more.
+              </p>
+            </div>
+          </li>
         </ul>
       </div>
     </section>

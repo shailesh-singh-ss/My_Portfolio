@@ -33,7 +33,7 @@
   color: var(--color-text);
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 30px;
 }
 
 .aboutItem {
@@ -60,6 +60,11 @@
 .aboutItem h3 {
   font-size: 25px;
   font-weight: 600;
+}
+
+.aboutItemIcon {
+  width: 120px;
+  padding-right: 40px;
 }
 
 .aboutItem p {
