@@ -1,11 +1,11 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const genAI = new GoogleGenerativeAI("AIzaSyDbfiHaEm2qrPJRi-GoRzhNRmXeu34YJLk");
+const genAI = new GoogleGenerativeAI(String(import.meta.env.VITE_API_KEY));
 const model = genAI.getGenerativeModel({
     model: "gemini-1.5-flash",
     generationConfig: {
         maxOutputTokens: 100,
-        temperature: 0.5,
+        temperature: 0.7,
     }
 });
 const prompt = `
