@@ -123,6 +123,10 @@
     width: 70%;
     margin: 10% 0;
   }
+
+  .buttonContainer{
+    gap: 50px
+  }
   .contactBtn{
     font-size: 18px;
     /* padding: 10px 20px */
