@@ -144,4 +144,8 @@
   .historyItemImage{
     display: none;
   }
+  
+  .historyItem.active {
+    background-size: 100% 100%;
+  }
 }

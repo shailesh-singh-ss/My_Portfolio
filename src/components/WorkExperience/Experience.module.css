@@ -2,7 +2,7 @@
 
 .container {
   position: relative;
-  padding: 60px;
+  padding: 60px 60px 30px 60px; /* Updated padding */
   background-color: rgba(20, 30, 50, 0.8); /* New background color */
   border-radius: 15px;
   margin-top: 70px;
@@ -24,6 +24,8 @@
 .experienceCard {
   position: relative;
   padding: 40px;
+  margin-bottom: 30px;
+  list-style: none;
   border-radius: 15px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
   box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.1), 0 15px 30px rgba(0, 0, 0, 0.2);
@@ -31,7 +33,7 @@
 }
 
 .experienceCard:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
 }
 
 .cardContent {
@@ -132,5 +134,9 @@
     font-size: 1rem;
     padding-left: 10px;
     border-left-width: 3px;
+  }
+
+  .experienceCard.active {
+    transform: scale(1.05);
   }
 }
